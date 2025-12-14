@@ -1,0 +1,106 @@
+pattern:
+  show:
+    show_words: [shows, displays, expresses]
+
+valid_patterns: [feel, show, is_in, attr]
+
+angry:
+  level1:
+    feel: [annoyed, irritated, displeased, mildly angry, slightly angry]
+    attr: [grouchy, grumpy, mildly angry, slightly angry]
+  level2:
+    feel: [angry, resentful, frustrated, bitter, fairly angry, quite angry]
+    show: [hatred, anger, resentment, hostility]
+    attr: [angry, hostile, fairly angry, quite angry]
+  level3:
+    feel: [exasperated, outraged, rage, outraged, furious, extremely angry, very angry]
+    show: [exasperation, rage, outrage, fury, wrath, loathing]
+    attr: [outraged, wrathful, hysterical, extremely angry, very angry]
+
+
+contempt:
+  level1:
+    attr: [mildly contemptuous, slightly contemptuous, mildly scornful, slightly scornful, mildly disdainful, slightly disdainful]
+  level2:
+    attr: [fairly contemptuous, quite contemptuous, fairly scornful, quite scornful, fairly disdainful, quite disdainful]
+  level3:
+    attr: [extremely contemptuous, very contemptuous, extremely scornful, very scornful, extremely disdainful, very disdainful]
+
+
+disgusted:
+  level1:
+    feel: [mildly disgusted, slightly disgusted, mildly appalled, slightly appalled, mildly sickened, slightly sickened]
+    attr: [mildly disgusted, slightly disgusted, mildly appalled, slightly appalled, mildly sickened, slightly sickened]
+  level2:
+    feel: [disgusted, fairly disgusted, quite disgusted, fairly appalled, quite appalled, fairly sickened, quite sickened]
+    show: [scorn, dislike]
+    attr: [disgusted, fairly disgusted, quite disgusted, fairly appalled, quite appalled, fairly sickened, quite sickened]
+  level3:
+    feel: [revulsion, extremely disgusted, very disgusted, extremely appalled, very appalled, extremely sickened, very sickened]
+    show: [hatred, loathing, revulsion]
+    is_in: [revulsion]
+    attr: [vengeful, extremely disgusted, very disgusted, extremely appalled, very appalled, extremely sickened, very sickened]
+
+
+
+fear:
+  level1:
+    feel: [insecure, anxious, nervous, tense, mildly scared, slightly scared, mildly frightened, slightly frightened]
+    show: [insecurity, anxiety]
+    attr: [insecure, anxious, nervous, tense, mildly scared, slightly scared, mildly frightened, slightly frightened]
+  level2:
+    feel: [fear, frightened, uneasy, worried, apprehensive, fairly scared, quite scared, fairly frightened, quite frightened]
+    show: [worry, apprehension]
+    attr: [frightened, uneasy, worried, apprehensive, fairly scared, quite scared, fairly frightened, quite frightened]
+  level3:
+    feel: [horrified, terror, panic, extremely scared, very scared, extremely frightened, very frightened]
+    is_in: [horror, panic]
+    attr: [horrified, extremely scared, very scared, extremely frightened, very frightened]
+
+
+happy:
+  level1: 
+    feel: [satisfied, content, mildly happy, slightly happy, mildly joyous, slightly joyous, mildly delighted, slightly delighted]
+    show: [satisfaction, contentment]
+    attr: [mildly happy, slightly happy, mildly joyous, slightly joyous, mildly delighted, slightly delighted]
+  level2:
+    feel: [cheerful, delighted, glad, enthusiastic, pleased, jolly, fairly happy, quite happy, fairly joyous, quite joyous, fairly delighted, quite delighted]
+    show: [eagerness, enthusiasm]
+    attr: [cheerful, joyous, delighted, eager, enthusiastic, jovial, fairly happy, quite happy, fairly joyous, quite joyous, fairly delighted, quite delighted]
+  level3:
+    feel: [ecstatic, jubilant, elated, euphoric, excited, thrilled, exhilarated, extremely happy, very happy, extremely joyous, very joyous, extremely delighted, very delighted]
+    show: [adoration, affection, love, fondness, excitement]
+    attr: [jubilant, ecstatic, euphoric, excited, exhilarated, extremely happy, very happy, extremely joyous, very joyous, extremely delighted, very delighted]
+
+
+sad:
+  level1:
+    feel: [mildly sad, slightly sad]
+    attr: [mildly sad, slightly sad]
+  level2:
+    feel: [gloomy, unhappy, disappointed, fairly sad, quite sad]
+    attr: [gloomy, unhappy, disappointed, glum, fairly sad, quite sad]
+  level3:
+    feel: [tormented, anguished, sorrowful, miserable, desperate, hopeless, grieved, extremely sad, very sad]
+    is_in: [agony, anguish, grief, sorrow, despair, distress]
+    show: [sorrow, woe, melancholy, despair, grief]
+    attr: [tormented, anguished, sorrowful, miserable, desperate, hopeless, extremely sad, very sad]
+
+
+surprised:
+  level1:
+    feel: [mildly surprised, slightly surprised]
+    attr: [mildly surprised, slightly surprised]
+  level2:
+    feel: [fairly surprised, quite surprised]
+    is_in: [alarm]
+    attr: [fairly surprised, quite surprised]
+  level3:
+    feel: [shocked, amazed, astonished, extremely surprised, very surprised]
+    is_in: [shock]
+    attr: [shocked, astonished, extremely surprised, very surprised]
+
+
+neutral:
+  level1:
+    attr: [impassive, calm, expressionless]
