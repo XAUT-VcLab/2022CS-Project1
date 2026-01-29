@@ -7,9 +7,9 @@
 项目整体流程如下：
 
 第一阶段
-<img width="18817" height="10108" alt="图1" src="https://github.com/user-attachments/assets/832d7659-f43c-4a2d-8f24-b5df1cb460ea" />
+<img width="16538" height="11675" alt="图1" src="https://github.com/user-attachments/assets/fbbe08b7-ff75-42a8-a5d1-37eb2983673c" />
 第二阶段
-<img width="18942" height="7808" alt="图2" src="https://github.com/user-attachments/assets/819c6991-25b6-4731-bfa9-b0ee7e6b8bee" />
+<img width="14813" height="8988" alt="图2" src="https://github.com/user-attachments/assets/1bd8c91b-e73f-4c1c-9ecc-9e271ae89e62" />
 ## 数据集
 3D人脸数据来自3DMEAD，语音数据来自MEAD，文本数据来自TA-MEAD。
 
