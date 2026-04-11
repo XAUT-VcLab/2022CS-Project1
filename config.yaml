@@ -12,6 +12,12 @@ dynamic_landmark_embedding: /home/chensheng/1Project/Project1/FLAME/flame_model/
 
 # python VQVAE2/Predict.py
 # python Generation/Predict.py
+# python Experiments/run_stage1_swap.py --pair_type text_emotion --deduplicate_reverse
+# python Experiments/run_stage1_swap.py --pair_type text_intensity --deduplicate_reverse
+# python Experiments/run_stage1_swap.py --pair_type identity --deduplicate_reverse
+# python Experiments/run_stage2_swap.py --pair_type text_emotion --deduplicate_reverse
+# python Experiments/run_stage2_swap.py --pair_type text_intensity --deduplicate_reverse
+# python Experiments/run_stage2_swap.py --pair_type identity --deduplicate_reverse
 predict:
   # 保存路径 _STtb _tb _STb _b
   vqvae_dir: /home/chensheng/1Project/Project1/VQVAE2/checkpoints_STtb/model_train.pth

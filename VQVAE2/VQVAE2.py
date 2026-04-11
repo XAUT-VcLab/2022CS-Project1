@@ -150,3 +150,61 @@ class VQVAE2(nn.Module):
 
         exp_output, jaw_output = self.decoder(person_one_hot, text, q_top, q_bottom)
         return exp_output, jaw_output, loss_top, loss_bottom
+
+    @torch.no_grad()
+    def encode_codes(self, person_one_hot, text, exp, jaw):
+        """
+        编码源样本，得到量化后的 top / bottom 离散特征。
+        只做编码，不做解码。
+        """
+        z_bottom = self.bottom_encoder.squash(exp, jaw)
+        z_top = self.top_encoder.squash(z_bottom)
+
+        z_top = self.top_encoder(person_one_hot, text, z_top)
+        _, q_top = self.vq_layer_top(z_top)
+
+        z_bottom = self.bottom_encoder(person_one_hot, text, q_top, z_bottom)
+        _, q_bottom = self.vq_layer_bottom(z_bottom)
+
+        return q_top, q_bottom
+
+    @torch.no_grad()
+    def decode_codes(self, person_one_hot, text, q_top, q_bottom):
+        """
+        给定条件和量化特征，直接解码得到 exp / jaw。
+        """
+        exp_output, jaw_output = self.decoder(person_one_hot, text, q_top, q_bottom)
+        return exp_output, jaw_output
+
+    @torch.no_grad()
+    def reconstruct_with_swapped_condition(
+        self,
+        source_person_one_hot,
+        source_text,
+        source_exp,
+        source_jaw,
+        target_person_one_hot=None,
+        target_text=None,
+    ):
+        """
+        先用 source 样本编码，再在解码端替换条件。
+        - 若 target_text 不为 None：交换文本条件
+        - 若 target_person_one_hot 不为 None：交换身份条件
+        """
+        q_top, q_bottom = self.encode_codes(
+            source_person_one_hot,
+            source_text,
+            source_exp,
+            source_jaw
+        )
+
+        decode_person = source_person_one_hot if target_person_one_hot is None else target_person_one_hot
+        decode_text = source_text if target_text is None else target_text
+
+        exp_output, jaw_output = self.decode_codes(
+            decode_person,
+            decode_text,
+            q_top,
+            q_bottom
+        )
+        return exp_output, jaw_output

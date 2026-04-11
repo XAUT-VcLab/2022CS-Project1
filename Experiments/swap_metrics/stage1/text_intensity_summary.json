@@ -1,0 +1,17 @@
+{
+  "num_groups": 175,
+  "mean_metrics": {
+    "EmPA": 0.98,
+    "IdPA": 1.0,
+    "InTA": 0.6257142857142857,
+    "SSR_int": 0.6142857142857143
+  },
+  "stage": "stage1",
+  "pair_type": "text_intensity",
+  "result_root": "Experiments/stage1_swap_results/text_intensity",
+  "classifier_checkpoints": {
+    "emotion": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/emotion/model_best.pth",
+    "intensity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/intensity/model_best.pth",
+    "identity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_identity/model_best.pth"
+  }
+}

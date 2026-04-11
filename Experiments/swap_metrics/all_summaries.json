@@ -1,0 +1,107 @@
+[
+  {
+    "num_groups": 588,
+    "mean_metrics": {
+      "EmTA": 0.8835034013605442,
+      "IdPA": 0.9982993197278912,
+      "InPA": 0.8010204081632653,
+      "SSR_emo": 0.7108843537414966
+    },
+    "stage": "stage1",
+    "pair_type": "text_emotion",
+    "result_root": "Experiments/stage1_swap_results/text_emotion",
+    "classifier_checkpoints": {
+      "emotion": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/emotion/model_best.pth",
+      "intensity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/intensity/model_best.pth",
+      "identity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_identity/model_best.pth"
+    }
+  },
+  {
+    "num_groups": 175,
+    "mean_metrics": {
+      "EmPA": 0.98,
+      "IdPA": 1.0,
+      "InTA": 0.6257142857142857,
+      "SSR_int": 0.6142857142857143
+    },
+    "stage": "stage1",
+    "pair_type": "text_intensity",
+    "result_root": "Experiments/stage1_swap_results/text_intensity",
+    "classifier_checkpoints": {
+      "emotion": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/emotion/model_best.pth",
+      "intensity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/intensity/model_best.pth",
+      "identity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_identity/model_best.pth"
+    }
+  },
+  {
+    "num_groups": 2634,
+    "mean_metrics": {
+      "EmPA": 0.9514047076689446,
+      "IdTA": 0.9960136674259681,
+      "InPA": 0.7881548974943052,
+      "SSR_id": 0.7501898253606681
+    },
+    "stage": "stage1",
+    "pair_type": "identity",
+    "result_root": "Experiments/stage1_swap_results/identity",
+    "classifier_checkpoints": {
+      "emotion": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/emotion/model_best.pth",
+      "intensity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/intensity/model_best.pth",
+      "identity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_identity/model_best.pth"
+    }
+  },
+  {
+    "num_groups": 588,
+    "mean_metrics": {
+      "EmTA": 0.9421768707482994,
+      "IdPA": 1.0,
+      "InPA": 0.8248299319727891,
+      "JPE": 0.050316637739868594,
+      "SSR_emo": 0.7806122448979592
+    },
+    "stage": "stage2",
+    "pair_type": "text_emotion",
+    "result_root": "Experiments/stage2_swap_results/text_emotion",
+    "classifier_checkpoints": {
+      "emotion": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/emotion/model_best.pth",
+      "intensity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/intensity/model_best.pth",
+      "identity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_identity/model_best.pth"
+    }
+  },
+  {
+    "num_groups": 175,
+    "mean_metrics": {
+      "EmPA": 0.9657142857142857,
+      "IdPA": 1.0,
+      "InTA": 0.7771428571428571,
+      "JPE": 0.04817215440262641,
+      "SSR_int": 0.76
+    },
+    "stage": "stage2",
+    "pair_type": "text_intensity",
+    "result_root": "Experiments/stage2_swap_results/text_intensity",
+    "classifier_checkpoints": {
+      "emotion": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/emotion/model_best.pth",
+      "intensity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/intensity/model_best.pth",
+      "identity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_identity/model_best.pth"
+    }
+  },
+  {
+    "num_groups": 2634,
+    "mean_metrics": {
+      "EmPA": 0.9627942293090357,
+      "IdTA": 0.9984813971146546,
+      "InPA": 0.7955580865603644,
+      "JPE": 0.06046351404675341,
+      "SSR_id": 0.7676537585421412
+    },
+    "stage": "stage2",
+    "pair_type": "identity",
+    "result_root": "Experiments/stage2_swap_results/identity",
+    "classifier_checkpoints": {
+      "emotion": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/emotion/model_best.pth",
+      "intensity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_emotion/intensity/model_best.pth",
+      "identity": "/home/chensheng/1Project/Project1/AuxClassifier/checkpoints_identity/model_best.pth"
+    }
+  }
+]
