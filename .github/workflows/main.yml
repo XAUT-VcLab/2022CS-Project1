@@ -1,0 +1,26 @@
+name: Sync Upstream
+
+on:
+  schedule:
+    # 定时运行，这里是 UTC 时间，'0 0 * * *' 代表每天北京时间早上8点执行
+    - cron: '0 0 * * *'
+  # 允许你手动触发
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # 必须带上 token 才能推送
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: repo-sync/github-sync@v2
+        name: 同步上游仓库
+        with:
+          source_repo: "chen114514sheng/DecTalk3D"  # 替换为原始仓库地址
+          source_branch: "main"              # 原仓库的分支名，通常是 main
+          destination_branch: "main"         # 你 fork 仓库的分支名
+          github_token: ${{ secrets.GITHUB_TOKEN }}
