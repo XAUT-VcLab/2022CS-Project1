@@ -2,16 +2,14 @@ name: Sync from Personal Fork
 
 on:
   schedule:
-    # 每 6 小时自动同步一次（UTC 时间）
     - cron: '0 */6 * * *'
-  # 允许手动触发
   workflow_dispatch:
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 明确授予写入权限
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -20,17 +18,14 @@ jobs:
           ref: main
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Configure Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Pull from personal fork
         run: |
-          # 添加你的个人 Fork 作为远程仓库
           git remote add fork https://github.com/chen114514sheng/DecTalk3D.git
-          
-          # 拉取个人 Fork 的 main 分支
           git fetch fork main
-          
-          # 合并到当前仓库的 main 分支
-          # --allow-unrelated-histories 用于首次合并两个独立仓库
           git merge fork/main --allow-unrelated-histories --no-edit -m "Sync from personal fork"
-          
-          # 推送到组织仓库
           git push origin main
