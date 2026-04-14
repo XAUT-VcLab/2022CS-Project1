@@ -27,5 +27,6 @@ jobs:
         run: |
           git remote add fork https://github.com/chen114514sheng/DecTalk3D.git
           git fetch fork main
-          git merge fork/main --allow-unrelated-histories --no-edit -m "Sync from personal fork"
+          # 使用 -X theirs 自动采用个人 fork 的版本解决冲突
+          git merge fork/main --allow-unrelated-histories --no-edit -X theirs -m "Sync from personal fork"
           git push origin main
