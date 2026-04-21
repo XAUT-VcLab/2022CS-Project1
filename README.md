@@ -154,7 +154,7 @@ python Experiments/render_swap_video.py --stage all --pair_type all
 
 ```bibtex
 @article{chen2026dectalk3d,
-  title   = {分层解耦引导的情感可控VQ-VAE3D说话人脸生成方法},
+  title   = {分层解耦引导的情感可控VQ-VAE 3D说话人脸生成方法},
   author  = {陈胜 and 孙强 and 朱霞天},
   journal = {中国图象图形学报},
   year    = {2026},
