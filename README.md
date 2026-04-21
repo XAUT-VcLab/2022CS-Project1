@@ -58,7 +58,7 @@ DecTalk3D/
 - **MEAD**：语音与表情数据  
   官网：https://wywu.github.io/projects/MEAD/MEAD.html
 - **3DMEAD**：由 MEAD 相关数据进一步处理得到的 3D 人脸运动数据  
-  参考处理来源：https://github.com/radekd91/inferno/tree/release/EMOTE/inferno_apps/TalkingHead/data_processing
+  下载位置：https://github.com/radekd91/inferno/tree/release/EMOTE/inferno_apps/TalkingHead/data_processing
 - **TA-MEAD**：文本描述数据
 
 ### 数据预处理
@@ -122,9 +122,18 @@ python Render1.py
 python Quality.py
 ```
 
+对比结果：https://www.bilibili.com/video/BV1ivdQB1EZW
+
 ## 条件交换实验（可选）
 
-若希望进一步验证模型的条件解耦能力与控制能力，可使用 `Experiments/` 中的脚本：
+若需要交换实验中的定量评估，请先训练辅助分类器：
+
+```bash
+python AuxClassifier/train_emotion.py
+python AuxClassifier/train_identity.py
+```
+
+再使用脚本：
 
 ```bash
 python Experiments/build_swap_pairs.py
@@ -135,20 +144,17 @@ python Experiments/render_swap_vis.py --stage all --pair_type all
 python Experiments/render_swap_video.py --stage all --pair_type all
 ```
 
-若需要交换实验中的定量评估，请先训练辅助分类器：
+重建阶段：https://www.bilibili.com/video/BV1ZvdQB1EMV
 
-```bash
-python AuxClassifier/train_emotion.py
-python AuxClassifier/train_identity.py
-```
+生成阶段：https://www.bilibili.com/video/BV1qvdQB1EjL
 
 ## 引用
 
 如果本项目对你的研究有帮助，请引用本文：
 
 ```bibtex
-@article{chen2026dectalk3d,
-  title   = {分层解耦引导的情感可控VQ-VAE3D说话人脸生成方法},
+@article{dectalk3d,
+  title   = {分层解耦引导的情感可控VQ-VAE 3D说话人脸生成方法},
   author  = {陈胜 and 孙强 and 朱霞天},
   journal = {中国图象图形学报},
   year    = {2026},
