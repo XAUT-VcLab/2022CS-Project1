@@ -153,7 +153,7 @@ python Experiments/render_swap_video.py --stage all --pair_type all
 如果本项目对你的研究有帮助，请引用本文：
 
 ```bibtex
-@article{chen2026dectalk3d,
+@article{dectalk3d,
   title   = {分层解耦引导的情感可控VQ-VAE 3D说话人脸生成方法},
   author  = {陈胜 and 孙强 and 朱霞天},
   journal = {中国图象图形学报},
