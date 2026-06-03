@@ -10,6 +10,12 @@ DecTalk3D 以 VQ-VAE 为基础，将人脸运动特征划分为顶层与底层�
 - 论文 DOI：https://doi.org/10.11834/jig.250451
 - 仓库地址：https://github.com/chen114514sheng/DecTalk3D
 
+## Demo
+
+这是一个面向 Windows 的 WebUI Demo，用于统一运行 DecTalk3D 和 ProDecTalk3D。 提供模型权重与数据文件。
+
+Demo地址：https://github.com/chen114514sheng/DecTalk3D-Demo
+
 ## 方法概述
 
 本文方法包含两个阶段：
@@ -124,7 +130,7 @@ python Quality.py
 
 对比结果：https://www.bilibili.com/video/BV1ivdQB1EZW
 
-## 条件交换实验（可选）
+## 条件交换实验
 
 若需要交换实验中的定量评估，请先训练辅助分类器：
 
